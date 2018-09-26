@@ -1,0 +1,19 @@
+{
+  "name": "reactssr",
+  "version": "1.0.0",
+  "description": "Server side rendering with react",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiserge2/reactServerSideRendering.git"
+  },
+  "author": "Sergio Suzerain Osson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiserge2/reactServerSideRendering/issues"
+  },
+  "homepage": "https://github.com/tiserge2/reactServerSideRendering#readme"
+}
