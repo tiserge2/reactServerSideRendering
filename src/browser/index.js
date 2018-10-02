@@ -1,4 +1,10 @@
 import ReactDOM from "react-dom"
-import Home from "../shared/home/Home"
+import React from "react"
+import App from "../shared/App"
+import { BrowserRouter } from "react-router-dom"
 
-ReactDOM.render(<Home />, document.getElementById("Root"))
+ReactDOM.hydrate(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+    , document.getElementById("Root"))

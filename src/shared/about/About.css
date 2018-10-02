@@ -1,0 +1,21 @@
+#about-main-container {
+    width: 500px;
+    height: 200px;
+    background-color: aqua;
+    box-shadow: 5px 5px 8px 10px #888888;
+    margin: 60px auto;
+}
+
+#about-header {
+    text-align: center;
+    padding-top: 30px;
+}
+
+#about-text {
+    text-align: center;
+}
+
+#return-link {
+    text-align: center;
+    font-size: 15px;
+}

@@ -1,19 +1,27 @@
 import express from "express"
 import React from "react"
-import Home from "../shared/home/Home"
+import App from "../shared/App"
+import routes from "../shared/routes"
+import { StaticRouter, matchPath } from "react-router-dom"
 import { renderToString } from "react-dom/server"
 
 const app = express()
 app.use(express.static("public"))
 
 app.get("*", (req, res) => {
-    const markup = renderToString(<Home />)
+    const activeRoute = routes.find(route => matchPath(req.url, route))
+    const markup = renderToString(
+        <StaticRouter location={req.url} context>
+            <App />
+        </StaticRouter>
+    )
+
     res.send(
         `
         <!DOCTYPE html>
         <html>
             <head>
-                <title>Universal Reacl</title>
+                <title>Universal React</title>
                 <script src="/bundle.js" defer></script>
             </head>
             <body>

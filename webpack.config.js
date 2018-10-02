@@ -9,22 +9,16 @@ const browserConfig = {
         filename: "./public/bundle.js",
     },
     devtool: "cheap-module-source-map",
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
-        })
-    ],
     module: {
         rules: [
             {
                 test: /\.css$/,
                 use: [
                     {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPath: "./public"
-                        }
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader"
                     }
                 ]        
             },
@@ -46,6 +40,12 @@ const serverConfig = {
         filename: "server.js",
         libraryTarget: "commonjs2"
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        })
+    ],
     devtool: "cheap-module-source-map",
     module: {
         rules: [
@@ -59,9 +59,12 @@ const serverConfig = {
                 test: /\.css$/,
                 use: [
                     {
-                        loader: "css-loader/locals"
-                    }
-                ]
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                        }
+                    },
+                    "css-loader"
+                ]        
             }
         ]
     }

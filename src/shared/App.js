@@ -1,16 +1,13 @@
 import React, { Component } from "react"
-import Home from "./home/Home"
+import routes from "./routes"
+import  { Switch, Route } from "react-router-dom"
 
-export default class App extends Component {
-    constructor(props) {
-        super(props)
-    }
-
-    render() {
-        return (
-            <div>
-                <Home />
-            </div>
-        )
-    }
+const App = () => {
+    return (
+        <Switch>
+            {routes.map((route, i) => <Route key={i} {...route} />)}
+        </Switch>
+    )
 }
+
+export default App
