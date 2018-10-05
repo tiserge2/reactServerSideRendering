@@ -21,7 +21,7 @@ app.get("*", (req, res) => {
         <!DOCTYPE html>
         <html>
             <head>
-                <title>Universal React</title>
+                <title>Your News App</title>
                 <script src="/bundle.js" defer></script>
             </head>
             <body>

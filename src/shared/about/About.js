@@ -19,7 +19,7 @@ export default class About extends Component{
                     It uses almost all the concept of SSR and
                     Isomorphic app.
                 </p>
-                <Link id="return-link" to="/">
+                <Link id="return-link-about" to="/">
                     <p>Return to home</p>
                 </Link>
             </div>
