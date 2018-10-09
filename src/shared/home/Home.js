@@ -26,4 +26,4 @@ import "./Home.css"
     }
 }
 
-export default Home;
+export default Home

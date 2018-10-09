@@ -9,9 +9,10 @@ const app = express()
 app.use(express.static("public"))
 
 app.get("*", (req, res) => {
+    const context = {}
     const activeRoute = routes.find(route => matchPath(req.url, route))
     const markup = renderToString(
-        <StaticRouter location={req.url} context>
+        <StaticRouter location={req.url} context = {context}>
             <App />
         </StaticRouter>
     )

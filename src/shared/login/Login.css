@@ -2,9 +2,9 @@
     width: 500px;
     height: 250px;
     background-color: aqua;
-    box-shadow: 5px 5px 8px 10px #888888;
     margin: 80px auto;
     padding-top: 30px;
+    border-top: 5px solid gray;
 }
 
 #login-form {

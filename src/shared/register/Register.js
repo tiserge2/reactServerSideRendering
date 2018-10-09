@@ -5,12 +5,23 @@ import "./Register.css"
 export default class Register extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            firstname: '',
+            lastname: '',
+            password1: '',
+            password2: '',
+            username: ''
+        }
+        this.handleSubmitFormRegister = this.handleSubmitFormRegister.bind(this)
     }
 
+    handleSubmitFormRegister = () => {
+        console.log("Submission is being doing...")
+    }
     render() {
         return(
             <div id="register-form-container">
-                <form id="register-form">
+                <form id="register-form" onSubmit={this.handleSubmitFormRegister}>
                     <p id="login-text">Please create your account </p>
                     <input type="text" placeholder="firstname" />
                     <input type="text" placeholder="lastname" />
